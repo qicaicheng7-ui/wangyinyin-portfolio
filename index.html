@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>王银银 · 初中英语教师</title>
+<meta name="description" content="王银银，5年+一线初中英语教学经验，深耕安徽中考考情，擅长分层培优补差。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23fffcf2'/><text x='50' y='72' font-size='56' text-anchor='middle' fill='%23eb5e28' font-family='serif' font-weight='bold'>W</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --bg:#fffcf2;--bg-alt:#f5f1e8;--card:#ffffff;
+  --text:#252422;--text-muted:#6b6862;--text-light:#9b9892;
+  --accent:#eb5e28;--accent-light:#f17a4f;--accent-dark:#c44a1e;
+  --accent-bg:rgba(235,94,40,.08);--accent-soft:rgba(235,94,40,.05);
+  --border:rgba(37,36,34,.08);--border-hover:rgba(37,36,34,.15);
+  --shadow:0 2px 16px rgba(37,36,34,.04);
+  --shadow-hover:0 12px 40px rgba(37,36,34,.08);
+  --radius:16px;--radius-sm:10px;--radius-xs:6px;
+  --serif:'Lora','Noto Serif SC',Georgia,serif;
+  --sans:'Noto Sans SC','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --transition:.35s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"]{
+  --bg:#1a1816;--bg-alt:#222020;--card:#2a2826;
+  --text:#f5f3ef;--text-muted:#a8a59f;--text-light:#6b6862;
+  --accent:#eb5e28;--accent-light:#f17a4f;--accent-dark:#c44a1e;
+  --accent-bg:rgba(235,94,40,.12);--accent-soft:rgba(235,94,40,.08);
+  --border:rgba(245,243,239,.08);--border-hover:rgba(245,243,239,.15);
+  --shadow:0 2px 16px rgba(0,0,0,.2);
+  --shadow-hover:0 12px 40px rgba(0,0,0,.3);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-snap-type:y mandatory;scroll-padding-top:0}
+body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.8;font-size:16px;overflow-x:hidden;transition:background var(--transition),color var(--transition)}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+::selection{background:var(--accent);color:#fff}
+
+/* Full-page snap */
+section{scroll-snap-align:start;scroll-snap-stop:always}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center}
+.section{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+
+/* Reading progress */
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:9999;transition:width .1s ease;border-radius:0 3px 3px 0}
+
+/* Navbar */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;transition:all var(--transition);padding:18px 0}
+.navbar.scrolled{background:rgba(var(--bg-rgb),.95);backdrop-filter:blur(12px);box-shadow:0 1px 20px rgba(0,0,0,.04);padding:12px 0}
+[data-theme="light"] .navbar.scrolled{background:rgba(255,252,242,.95)}
+[data-theme="dark"] .navbar.scrolled{background:rgba(26,24,22,.95)}
+.nav-container{max-width:1120px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--text);letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+.nav-logo .logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:14px;font-weight:400;color:var(--text-muted);transition:color var(--transition);position:relative;padding:4px 0}
+.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-links a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--accent);border-radius:2px}
+.theme-toggle{width:40px;height:40px;border-radius:50%;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--transition);font-size:15px}
+.theme-toggle:hover{border-color:var(--accent);color:var(--accent);transform:rotate(15deg)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.nav-toggle span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+.nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.active span:nth-child(2){opacity:0}
+.nav-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--bg)}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,var(--accent-soft) 1px,transparent 1px);background-size:32px 32px;opacity:.6}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.15;animation:blobFloat 8s ease-in-out infinite}
+.hero-blob-1{width:400px;height:400px;background:var(--accent);top:10%;right:5%}
+.hero-blob-2{width:300px;height:300px;background:#378add;bottom:15%;left:10%;animation-delay:3s}
+@keyframes blobFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(20px,-30px) scale(1.05)}}
+.hero-content{text-align:center;position:relative;z-index:2;padding:0 32px;max-width:760px}
+.hero-content>*{opacity:0;animation:heroIn .8s ease forwards}
+.hero-greeting{animation-delay:.1s;font-size:13px;letter-spacing:4px;color:var(--accent);text-transform:uppercase;margin-bottom:16px;font-weight:500}
+.hero-name{animation-delay:.25s;font-family:var(--serif);font-size:clamp(3rem,8vw,5rem);font-weight:600;color:var(--text);letter-spacing:2px;margin-bottom:4px;line-height:1.1}
+.hero-title{animation-delay:.4s;font-size:clamp(1.1rem,3vw,1.4rem);color:var(--text-muted);font-weight:400;margin-bottom:28px}
+.hero-divider{animation-delay:.5s;width:48px;height:2px;background:var(--accent);margin:0 auto 28px;border-radius:2px}
+.hero-tagline{animation-delay:.6s;font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,2.5vw,1.3rem);color:var(--text);font-weight:400;margin-bottom:32px}
+.hero-sub{animation-delay:.7s;font-size:14px;color:var(--text-light);margin-bottom:40px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.hero-sub .dot{color:var(--accent)}
+.hero-cta{animation-delay:.85s;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 36px;border-radius:50px;font-size:14px;font-weight:500;transition:all var(--transition);cursor:pointer;border:none;font-family:var(--sans)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(235,94,40,.3)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border-hover)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.hero-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);text-align:center;z-index:2;opacity:0;animation:heroIn .8s ease 1s forwards}
+.hero-scroll span{font-size:11px;letter-spacing:2px;color:var(--text-light)}
+.scroll-line{width:1px;height:40px;margin:8px auto 0;background:var(--border);overflow:hidden;position:relative}
+.scroll-line::after{content:'';position:absolute;top:0;left:0;width:100%;height:50%;background:var(--accent);animation:scrollDot 2s ease infinite}
+@keyframes scrollDot{0%{transform:translateY(-100%)}100%{transform:translateY(200%)}}
+@keyframes heroIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* Section */
+.section{padding:80px 0}
+.section-alt{background:var(--bg-alt)}
+#portfolio{padding:60px 0}
+#portfolio .section-header{margin-bottom:32px}
+.container{max-width:1120px;margin:0 auto;padding:0 32px}
+.section-header{text-align:center;margin-bottom:64px}
+.section-label{display:inline-block;font-size:12px;letter-spacing:4px;color:var(--accent);text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.section-title{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.4rem);font-weight:600;color:var(--text);margin-bottom:16px}
+.section-line{width:48px;height:2px;background:var(--accent);border-radius:2px;margin:0 auto}
+.section-desc{font-size:15px;color:var(--text-muted);margin-top:16px;max-width:480px;margin-left:auto;margin-right:auto}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:center}
+.about-text p{margin-bottom:20px;color:var(--text);font-size:16px;line-height:2}
+.about-text .highlight{color:var(--accent);font-weight:500}
+.about-quote{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--text);border-left:3px solid var(--accent);padding-left:20px;margin-top:24px;line-height:1.8}
+.about-stats{display:grid;gap:16px}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;text-align:center;box-shadow:var(--shadow);transition:all var(--transition)}
+.stat-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-4px);border-color:var(--accent)}
+.stat-icon{font-size:24px;color:var(--accent);margin-bottom:12px}
+.stat-number{font-family:var(--serif);font-size:32px;font-weight:600;color:var(--text)}
+.stat-number span{font-size:16px;font-weight:400;color:var(--text-muted)}
+.stat-label{font-size:13px;color:var(--text-muted);margin-top:6px}
+
+/* Tabs */
+.tabs-wrapper{max-width:1120px;margin:0 auto}
+.tab-nav{display:flex;justify-content:center;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.tab-btn{padding:12px 28px;border-radius:50px;font-size:14px;font-weight:500;color:var(--text-muted);background:transparent;border:1.5px solid var(--border);cursor:pointer;transition:all var(--transition);font-family:var(--sans);display:flex;align-items:center;gap:8px}
+.tab-btn:hover{border-color:var(--border-hover);color:var(--text)}
+.tab-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 4px 16px rgba(235,94,40,.25)}
+.tab-btn i{font-size:13px}
+.tab-panel{display:none;animation:tabFade .4s ease}
+.tab-panel.active{display:block}
+@keyframes tabFade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* Education Timeline */
+.timeline{position:relative;padding-left:40px}
+.timeline-item{position:relative;padding-bottom:48px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item::before{content:'';position:absolute;left:-29px;top:8px;bottom:0;width:2px;background:var(--border)}
+.timeline-item:last-child::before{display:none}
+.timeline-item::after{content:'';position:absolute;left:-36px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg-alt),0 0 0 5px var(--accent)}
+.edu-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);transition:all var(--transition)}
+.edu-card:hover{box-shadow:var(--shadow-hover);transform:translateX(4px);border-color:var(--border-hover)}
+.edu-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:8px}
+.edu-school{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--text)}
+.edu-meta{font-size:14px;color:var(--accent);font-weight:500}
+.edu-status{display:inline-block;font-size:12px;padding:3px 12px;border-radius:20px;background:var(--accent-bg);color:var(--accent);font-weight:500}
+.edu-courses{font-size:14px;color:var(--text-muted);margin-top:14px;line-height:1.8}
+.edu-courses strong{color:var(--text);font-weight:500}
+.collapse-toggle{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--accent);cursor:pointer;margin-top:12px;font-weight:500;transition:color var(--transition);user-select:none}
+.collapse-toggle:hover{color:var(--accent-dark)}
+.collapse-toggle i{transition:transform var(--transition);font-size:11px}
+.collapse-toggle.open i{transform:rotate(180deg)}
+.collapse-content{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.collapse-content.open{max-height:300px}
+.collapse-inner{padding-top:14px;border-top:1px dashed var(--border);margin-top:14px;font-size:14px;color:var(--text-muted);line-height:1.8}
+
+/* Experience */
+.exp-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px;padding:18px 24px;background:var(--accent);border-radius:var(--radius);color:#fff}
+.exp-header h3{font-family:var(--serif);font-size:20px;font-weight:600}
+.exp-header p{font-size:13px;color:rgba(255,255,255,.85);margin-top:2px}
+.exp-date{font-size:13px;color:rgba(255,255,255,.9);font-weight:500;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.exp-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);transition:all var(--transition)}
+.exp-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-4px);border-color:var(--accent)}
+.exp-icon{width:40px;height:40px;border-radius:10px;background:var(--accent-bg);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--accent);font-size:17px}
+.exp-card h4{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--text);margin-bottom:10px}
+.exp-card ul{display:flex;flex-direction:column;gap:7px}
+.exp-card li{font-size:13px;color:var(--text-muted);line-height:1.55;padding-left:14px;position:relative}
+.exp-card li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.skill-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);transition:all var(--transition)}
+.skill-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-4px);border-color:var(--accent)}
+.skill-header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.skill-icon{width:46px;height:46px;border-radius:12px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0}
+.skill-card h4{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--text)}
+.skill-card p{font-size:14px;color:var(--text-muted);line-height:1.8}
+
+/* Advantages */
+.adv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.adv-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);transition:all var(--transition);display:flex;gap:24px;position:relative;overflow:hidden}
+.adv-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent);transform:scaleY(0);transform-origin:top;transition:transform var(--transition)}
+.adv-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-4px)}
+.adv-card:hover::before{transform:scaleY(1)}
+.adv-num{font-family:var(--serif);font-size:36px;font-weight:600;color:var(--accent);line-height:1;flex-shrink:0;opacity:.5}
+.adv-body h4{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--text);margin-bottom:8px}
+.adv-body p{font-size:14px;color:var(--text-muted);line-height:1.8}
+
+/* Contact */
+.contact{background:var(--bg);padding:80px 0;text-align:center;position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.contact::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,var(--accent-soft) 1px,transparent 1px);background-size:32px 32px;opacity:.6}
+.contact-content{position:relative;z-index:2;max-width:600px;margin:0 auto;padding:0 32px}
+.contact .section-label{color:var(--accent)}
+.contact .section-title{color:var(--text)}
+.contact .section-line{background:var(--accent)}
+.contact-badge{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--accent);border:1.5px solid var(--border-hover);background:var(--card);border-radius:50px;padding:10px 26px;margin-bottom:36px;box-shadow:var(--shadow)}
+.contact-items{display:flex;flex-direction:column;gap:18px;margin-bottom:24px}
+.contact-item{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--text);font-size:18px;transition:all var(--transition);padding:16px 20px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow)}
+.contact-item:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.contact-item i{color:var(--accent);flex-shrink:0;font-size:20px}
+.contact-qr{margin-bottom:20px}
+.contact-qr-label{font-size:14px;color:var(--text-muted);margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:8px}
+.contact-qr-label i{color:#07c160;font-size:18px}
+.contact-qr-img{width:140px;height:140px;margin:0 auto;padding:10px;background:var(--card);border-radius:var(--radius-sm);border:1px solid var(--border);box-shadow:var(--shadow);transition:all var(--transition)}
+.contact-qr-img:hover{box-shadow:var(--shadow-hover);transform:translateY(-3px)}
+.contact-qr-img img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.contact-cta{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--text-muted);margin-top:18px}
+
+/* Footer */
+.footer{scroll-snap-align:start;scroll-snap-stop:always;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;background:var(--bg-alt);padding:0 0 28px;text-align:center}
+.footer p{font-size:13px;color:var(--text-light);padding:0 32px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.active{opacity:1;transform:translateY(0)}
+.reveal:nth-child(2){transition-delay:.1s}
+.reveal:nth-child(3){transition-delay:.2s}
+.reveal:nth-child(4){transition-delay:.3s}
+
+/* Responsive */
+@media(max-width:1200px){
+  .exp-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  html{scroll-snap-type:none}
+  section,.footer{scroll-snap-align:none;scroll-snap-stop:normal}
+  .section,.contact,.footer{min-height:auto}
+  .nav-links{position:fixed;top:0;right:-100%;width:65%;height:100vh;background:var(--bg);flex-direction:column;justify-content:center;align-items:center;gap:28px;transition:right .35s ease;box-shadow:-8px 0 32px rgba(0,0,0,.08)}
+  .nav-links.active{right:0}
+  .nav-links a{font-size:17px}
+  .nav-toggle{display:flex;z-index:1001}
+  .section{padding:80px 0}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-stats{grid-template-columns:repeat(3,1fr)}
+  .stat-card{padding:18px 12px}
+  .stat-number{font-size:26px}
+  .exp-header{flex-direction:column;align-items:flex-start;text-align:left}
+  .exp-grid,.skills-grid,.adv-grid{grid-template-columns:1fr}
+  .hero-cta{flex-direction:column;align-items:center}
+  .btn{width:80%;max-width:280px;justify-content:center}
+  .tab-btn{padding:10px 20px;font-size:13px}
+  .container{padding:0 24px}
+  .nav-container{padding:0 24px}
+}
+@media(max-width:420px){
+  .about-stats{grid-template-columns:1fr}
+  .hero-sub{flex-direction:column;gap:6px}
+  .hero-sub .dot{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar" style="width:0"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo"><span class="logo-dot"></span>王银银</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">简介</a></li>
+      <li><a href="#portfolio">经历</a></li>
+      <li><a href="#advantages">优势</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="hero" class="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-content">
+    <p class="hero-greeting">Hello, I am</p>
+    <h1 class="hero-name">王银银</h1>
+    <p class="hero-title">初中英语教师</p>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">"以专业扎根课堂，用耐心成就学生"</p>
+    <div class="hero-sub">
+      <span>5年+一线教学经验</span>
+      <span class="dot">·</span>
+      <span>深耕安徽中考考情</span>
+      <span class="dot">·</span>
+      <span>擅长分层培优补差</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#about" class="btn btn-primary"><i class="fas fa-user"></i>了解更多</a>
+      <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i>联系我</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">About Me</span>
+      <h2 class="section-title">个人简介</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>热爱中小学基础教育事业，拥有系统的教育学理论知识与<span class="highlight">5年+一线初中英语教学经验</span>。深耕安徽本地学情，吃透初中英语教学内容与中考考情，擅长趣味课堂与分层补差教学，能稳步提升学生成绩。</p>
+        <p>具备成熟的课堂管理、教研协作、家校沟通能力，工作严谨踏实，待人亲和包容。持续打磨教学能力，坚守教书育人初心。</p>
+        <div class="about-quote">坚守教书育人初心，认真做好教学与育人各项工作。</div>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <div class="stat-number">5<span>年+</span></div>
+          <div class="stat-label">一线教学经验</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-school"></i></div>
+          <div class="stat-number">全年级</div>
+          <div class="stat-label">初中英语覆盖</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-map-pin"></i></div>
+          <div class="stat-number">2020<span>起</span></div>
+          <div class="stat-label">扎根固镇本地</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio (Tabs: Education / Experience / Skills) -->
+<section id="portfolio" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Portfolio</span>
+      <h2 class="section-title">教育与经历</h2>
+      <div class="section-line"></div>
+      <p class="section-desc">教育背景、工作经历与专业技能一览</p>
+    </div>
+    <div class="tabs-wrapper reveal">
+      <div class="tab-nav">
+        <button class="tab-btn active" data-tab="education"><i class="fas fa-graduation-cap"></i>教育背景</button>
+        <button class="tab-btn" data-tab="experience"><i class="fas fa-briefcase"></i>工作经历</button>
+        <button class="tab-btn" data-tab="skills"><i class="fas fa-star"></i>专业技能</button>
+      </div>
+
+      <!-- Tab: Education -->
+      <div class="tab-panel active" id="tab-education">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="edu-card">
+              <div class="edu-header">
+                <div>
+                  <div class="edu-school">江西师范大学</div>
+                  <div class="edu-meta">小学教育 · 本科 <span class="edu-status">在读</span></div>
+                </div>
+              </div>
+              <div class="edu-courses"><strong>核心课程：</strong>教育学、教育心理学、中小学学科教学法、班级管理、新课标解读、基础教育课程改革</div>
+              <div class="collapse-toggle" onclick="toggleCollapse(this)">
+                <span>查看详情</span> <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="collapse-content">
+                <div class="collapse-inner">搭建完整教育理论体系，熟练掌握素质教育理念，熟知中小学育人规律，为英语授课、学生管理、家校沟通打下扎实理论基础。</div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="edu-card">
+              <div class="edu-header">
+                <div>
+                  <div class="edu-school">马鞍山高等师范专科学校</div>
+                  <div class="edu-meta">计算机网络技术 · 专科 <span class="edu-status">毕业</span></div>
+                </div>
+              </div>
+              <div class="edu-courses"><strong>核心课程：</strong>计算机基础、多媒体应用、办公自动化、网络基础</div>
+              <div class="collapse-toggle" onclick="toggleCollapse(this)">
+                <span>查看详情</span> <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="collapse-content">
+                <div class="collapse-inner">熟练运用多媒体设备与办公软件制作教学课件，擅长借助信息化工具设计趣味课堂，适配现代化智慧教学模式。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Experience -->
+      <div class="tab-panel" id="tab-experience">
+        <div class="exp-header">
+          <div>
+            <h3>固镇县汉兴学校</h3>
+            <p>初中英语教师</p>
+          </div>
+          <span class="exp-date"><i class="far fa-calendar"></i> 2020.08 — 至今</span>
+        </div>
+        <div class="exp-grid">
+          <div class="exp-card">
+            <div class="exp-icon"><i class="fas fa-book-open"></i></div>
+            <h4>日常课堂教学</h4>
+            <ul>
+              <li>紧扣新课标与安徽中考考点，梳理词汇、语法、听说读写重难点</li>
+              <li>采用情景教学、课堂小游戏、分层提问模式，适配初中生学习特点</li>
+              <li>持续提升班级课堂专注度，所带班级英语平均分稳步上涨</li>
+            </ul>
+          </div>
+          <div class="exp-card">
+            <div class="exp-icon"><i class="fas fa-chart-line"></i></div>
+            <h4>分层培优补差</h4>
+            <ul>
+              <li>针对单词记忆困难、语法混淆等共性问题制定专属学习计划</li>
+              <li>每日单词打卡、错题整理、专项题型训练并行</li>
+              <li>一对一帮扶学困生夯实基础，为优等生拓展拔高，缩小成绩差距</li>
+            </ul>
+          </div>
+          <div class="exp-card">
+            <div class="exp-icon"><i class="fas fa-users-cog"></i></div>
+            <h4>教研教务工作</h4>
+            <ul>
+              <li>参加校内英语教研组集体备课、听课评课、公开课教研活动</li>
+              <li>按时完成教案撰写、试卷命题批改、学情报表、教学总结</li>
+              <li>交流优秀授课思路，持续优化自身教学设计</li>
+            </ul>
+          </div>
+          <div class="exp-card">
+            <div class="exp-icon"><i class="fas fa-handshake"></i></div>
+            <h4>学生管理与家校沟通</h4>
+            <ul>
+              <li>了解青春期初中生心理特点，严慈并济管理课堂纪律</li>
+              <li>及时疏导学生学习负面情绪，帮助学生建立自信心</li>
+              <li>定期通过微信、家长会同步学习情况，协同家长做好家校共育</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Skills -->
+      <div class="tab-panel" id="tab-skills">
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fas fa-chalkboard"></i></div>
+              <h4>教学能力</h4>
+            </div>
+            <p>精通初中英语整套知识框架，熟悉安徽中考题型与命题方向，可独立完成备课、授课、阅卷、毕业班辅导全流程</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fas fa-certificate"></i></div>
+              <h4>证书规划</h4>
+            </div>
+            <p>熟知中小学教学规章制度，正在备考高中英语教师资格证，持续夯实英语学科与教育理论功底</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fas fa-desktop"></i></div>
+              <h4>办公信息化</h4>
+            </div>
+            <p>熟练使用 Word、Excel、PPT 制作课件、试卷、学情统计表，熟练操作多媒体一体机开展多媒体授课</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fas fa-language"></i></div>
+              <h4>语言素养</h4>
+            </div>
+            <p>普通话标准，英语口语流利，课堂氛围感强，擅长调动学生发言积极性，适配初中授课节奏</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Advantages -->
+<section id="advantages" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Advantages</span>
+      <h2 class="section-title">个人优势</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-card reveal">
+        <div class="adv-num">01</div>
+        <div class="adv-body">
+          <h4>教学适配性极强</h4>
+          <p>自2020年起扎根固镇本地学校任教，熟悉本地学生学习习惯、教材版本、中考考情，入职即可接手教学工作，不用漫长适应期。</p>
+        </div>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-num">02</div>
+        <div class="adv-body">
+          <h4>擅长零基础补差</h4>
+          <p>很会拆解难懂的英语知识点，对待基础薄弱学生耐心足，侧重学习习惯养成，教学落地性强，提分效果稳定。</p>
+        </div>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-num">03</div>
+        <div class="adv-body">
+          <h4>自我提升意识强</h4>
+          <p>工作之余攻读本科、备考高中英语教资，主动钻研新课标新式教法，学习能力强，职业成长性高。</p>
+        </div>
+      </div>
+      <div class="adv-card reveal">
+        <div class="adv-num">04</div>
+        <div class="adv-body">
+          <h4>性格稳重责任心强</h4>
+          <p>热爱教育行业，共情力强，擅长处理师生矛盾、沟通家长，工作踏实守岗，职业稳定性高。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <div class="contact-content">
+    <div class="section-header reveal">
+      <span class="section-label">Contact</span>
+      <h2 class="section-title">联系方式</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-badge reveal"><i class="fas fa-bullseye"></i> 求职意向：初中英语教师</div>
+    <div class="contact-items">
+      <a href="tel:18455202667" class="contact-item reveal">
+        <i class="fas fa-phone-alt"></i>
+        <span>18455202667</span>
+      </a>
+      <a href="mailto:2150227807@qq.com" class="contact-item reveal">
+        <i class="fas fa-envelope"></i>
+        <span>2150227807@qq.com</span>
+      </a>
+    </div>
+    <div class="contact-qr reveal">
+      <p class="contact-qr-label"><i class="fab fa-weixin"></i> 微信扫码添加</p>
+      <div class="contact-qr-img">
+        <img src="wechat-qr.jpg" alt="王银银微信二维码" loading="lazy">
+      </div>
+    </div>
+    <p class="contact-cta reveal">期待与您进一步沟通</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>王银银 · 初中英语教师 · 求职个人网站</p>
+</footer>
+
+<script>
+(function(){
+  // Theme toggle
+  var html = document.documentElement;
+  var themeToggle = document.getElementById('themeToggle');
+  var themeIcon = document.getElementById('themeIcon');
+  var savedTheme = 'light';
+  try { savedTheme = localStorage.getItem('theme') || 'light'; } catch(e) {}
+  if(savedTheme === 'dark'){
+    html.setAttribute('data-theme','dark');
+    themeIcon.className = 'fas fa-sun';
+  }
+  themeToggle.addEventListener('click', function(){
+    var current = html.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    themeIcon.className = next === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    try { localStorage.setItem('theme', next); } catch(e) {}
+  });
+
+  // Reading progress
+  var progressBar = document.getElementById('progressBar');
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    progressBar.style.width = pct + '%';
+  });
+
+  // Navbar scroll
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+  });
+
+  // Mobile menu
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', function(){
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(link){
+    link.addEventListener('click', function(){
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // Tab switching
+  document.querySelectorAll('.tab-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var tabId = btn.getAttribute('data-tab');
+      document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('tab-' + tabId).classList.add('active');
+    });
+  });
+
+  // Collapse toggle
+  window.toggleCollapse = function(el){
+    var content = el.nextElementSibling;
+    var isOpen = content.classList.contains('open');
+    content.classList.toggle('open');
+    el.classList.toggle('open');
+    el.querySelector('span').textContent = isOpen ? '查看详情' : '收起详情';
+  };
+
+  // Reveal animation
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting) entry.target.classList.add('active');
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
+
+  // Active nav link
+  var sections = document.querySelectorAll('section[id]');
+  var navItems = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', function(){
+    var current = '';
+    sections.forEach(function(section){
+      if(window.scrollY >= section.offsetTop - 100) current = section.getAttribute('id');
+    });
+    navItems.forEach(function(item){
+      item.classList.remove('active');
+      if(item.getAttribute('href') === '#' + current) item.classList.add('active');
+    });
+  });
+})();
+</script>
+</body>
+</html>
